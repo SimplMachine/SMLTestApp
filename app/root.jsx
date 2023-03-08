@@ -10,7 +10,7 @@ import styles from "~/styles/global.css";
 
 export const meta = () => ({
   charset: "utf-8",
-  title: "Simpl Machine",
+  title: "Simpl Machine - Home",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -33,6 +33,14 @@ export const links = () => [
   },
 ];
 
+const NavBar = () => {
+  return (
+    <nav>
+      <a href='/buttons'>Buttons</a>
+    </nav>
+  );
+};
+
 export default function App() {
   return (
     <html lang='en'>
@@ -41,6 +49,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <NavBar />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
